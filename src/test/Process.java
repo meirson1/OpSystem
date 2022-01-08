@@ -1,24 +1,24 @@
 package test;
 
 public class Process {
-        int arriValTime;
+        int ArrivalTime;
         int bursTime;
 
-        public Process(int arriValTime, int bursTime) {
-                this.arriValTime = arriValTime;
+        public Process(int ArrivalTime, int bursTime) {
+                this.ArrivalTime = ArrivalTime;
                 this.bursTime = bursTime;
         }
 
-        public int getArriValTime() {
-                return this.arriValTime;
+        public int getArrivalTime() {
+                return this.ArrivalTime;
         }
 
         public int getBursTime() {
                 return this.bursTime;
         }
 
-        public void setArriValTime(int arriValTime1) {
-                this.arriValTime = arriValTime1;
+        public void setArrivalTime(int ArrivalTime1) {
+                this.ArrivalTime = ArrivalTime1;
         }
 
         public void setBursTime(int bursTime1) {
