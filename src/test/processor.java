@@ -1,6 +1,6 @@
 package test;
 import java.io.*;
-
+//---------------main---------------//
 public class processor {
 
     public static void main(String[] args) throws Exception
@@ -11,6 +11,7 @@ public class processor {
         String st;
         int numOfProcess=Integer.parseInt(br.readLine());
         Process[] pro=new Process[numOfProcess];
+
         for(int i=0;i<numOfProcess;i++)
         {
             String line= br.readLine();
@@ -18,5 +19,9 @@ public class processor {
             pro[i]=new Process(Integer.parseInt(times[0]),Integer.parseInt(times[1]));
         }
         new RR(pro);
+        FCFS fcfs =  new FCFS(pro);
+        System.out.println("FCFS: mean turnaround = " + (fcfs.sumTurnaround/(float)numOfProcess)  + "\n");
+
+
     }
 }
