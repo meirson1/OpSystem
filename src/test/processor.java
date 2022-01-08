@@ -5,7 +5,7 @@ public class processor {
 
     public static void main(String[] args) throws Exception
     {
-        File file = new File("C:\\Users\\pankaj\\Desktop\\test.txt");
+        File file = new File("input1.txt");
         BufferedReader br = new BufferedReader(new FileReader(file));
 
         String st;
