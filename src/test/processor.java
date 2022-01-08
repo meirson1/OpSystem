@@ -16,9 +16,7 @@ public class processor {
             String line= br.readLine();
             String[] times=line.split(",");
             pro[i]=new Process(Integer.parseInt(times[0]),Integer.parseInt(times[1]));
-
-
-
         }
+        new RR(pro);
     }
 }
