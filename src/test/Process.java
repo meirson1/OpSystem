@@ -24,8 +24,9 @@ public class Process {
         public void setBursTime(int bursTime1) {
                 this.bursTime = bursTime1;
         }
-           public void clone(Process p){
-                this.arriValTime=p.arriValTime;
-                this.bursTime=p.bursTime;
+           public void clone(Process p) {
+                   this.ArrivalTime = p.ArrivalTime;
+                   this.bursTime = p.bursTime;
+           }
 }
 

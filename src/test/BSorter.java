@@ -11,7 +11,7 @@ public class BSorter {
             swapped=false;
             for (int j=0;j<pro.length-i-1;j++)
             {
-                if(pro[j].arriValTime>pro[j+1].arriValTime){
+                if(pro[j].ArrivalTime>pro[j+1].ArrivalTime){
                     Swap.swap(pw1=new ProcessWraper(pro[j]),pw2=new ProcessWraper(pro[j+1]));
                     pro[j]=pw1.p;
                     pro[j+1]=pw2.p;
