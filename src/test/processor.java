@@ -18,5 +18,7 @@ public class processor {
             pro[i]=new Process(Integer.parseInt(times[0]),Integer.parseInt(times[1]));
         }
         System.out.println("Average of Round Robin with quantum of 2 is: "+new RR(pro).output);
+        FCFS fcfs =  new FCFS(pro);
+        System.out.println("FCFS: mean turnaround = " + ((float)fcfs.sumTurnaround/(float)numOfProcess)  + "\n");
     }
 }
