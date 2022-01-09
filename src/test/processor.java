@@ -1,6 +1,6 @@
 package test;
 import java.io.*;
-//---------------main---------------//
+
 public class processor {
 
     public static void main(String[] args) throws Exception
@@ -18,8 +18,6 @@ public class processor {
             String[] times=line.split(",");
             pro[i]=new Process(Integer.parseInt(times[0]),Integer.parseInt(times[1]));
         }
-        new RR(pro);
-
-
+        System.out.println("Average of Round Robin with quantum of 2 is: "+new RR(pro).output);
     }
 }
