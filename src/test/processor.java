@@ -17,11 +17,13 @@ public class processor {
             String[] times=line.split(",");
             pro[i]=new Process(Integer.parseInt(times[0]),Integer.parseInt(times[1]));
         }
+        System.out.println("Average of Round Robin with quantum of 2 is: "+new RR(pro).output+"\n");
+        FCFS fcfs =  new FCFS(pro);
+        System.out.println("FCFS: mean turnaround = " + ((float)fcfs.sumTurnaround/(float)numOfProcess)  + "\n");
         BSorter sorter=new BSorter();
         sorter.sort(pro);
         LCFS last=new LCFS();
         float lcfsAvg=last.calculate(pro);
         System.out.println("Average of LCFS is: " +lcfsAvg);
-        System.out.println("Average of Round Robin with quantum of 2 is: "+new RR(pro).output);
     }
 }

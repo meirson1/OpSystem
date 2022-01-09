@@ -3,6 +3,8 @@ package test;
 public class Process {
         int ArrivalTime;
         int bursTime;
+        int finishTime;
+        int waitingTime;
 
         public Process(int ArrivalTime, int bursTime) {
                 this.ArrivalTime = ArrivalTime;
