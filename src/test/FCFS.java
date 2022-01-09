@@ -32,7 +32,7 @@ public class FCFS implements scheduling{
             }
             sumTurnaround += prcsLst.get(j).waitingTime + prcsLst.get(j).bursTime;
         }
-        return  ((float)sumTurnaround / (float)4);
+        return sumTurnaround;
     }
 
     public void bubbleSort() {
@@ -41,6 +41,7 @@ public class FCFS implements scheduling{
         for (int i = 0; i < prcsLst.size() - 1  ; i++) {
             for (int j = 0; j < prcsLst.size() - i - 1; j++) {
                 if(prcsLst.get(j).arriValTime > prcsLst.get(j + 1).arriValTime){
+
                     tempProcess.arriValTime =  prcsLst.get(j).arriValTime;
                     tempProcess.bursTime =  prcsLst.get(j).bursTime;
 

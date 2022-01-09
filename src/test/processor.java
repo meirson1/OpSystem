@@ -20,7 +20,7 @@ public class processor {
         }
         new RR(pro);
         FCFS fcfs =  new FCFS(pro);
-        System.out.println("FCFS: mean turnaround = " + (fcfs.sumTurnaround/(float)numOfProcess)  + "\n");
+        System.out.println("FCFS: mean turnaround = " + ((float)fcfs.sumTurnaround/(float)numOfProcess)  + "\n");
 
 
     }
