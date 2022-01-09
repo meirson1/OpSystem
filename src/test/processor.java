@@ -1,6 +1,6 @@
 package test;
 import java.io.*;
-
+//---------------main---------------//
 public class processor {
 
     public static void main(String[] args) throws Exception
@@ -18,6 +18,10 @@ public class processor {
             String[] times=line.split(",");
             pro[i]=new Process(Integer.parseInt(times[0]),Integer.parseInt(times[1]));
         }
-        System.out.println("Average of Round Robin with quantum of 2 is: "+new RR(pro).output);
+        new RR(pro);
+        FCFS fcfs =  new FCFS(pro);
+        System.out.println("FCFS: mean turnaround = " + ((float)fcfs.sumTurnaround/(float)numOfProcess)  + "\n");
+
+
     }
 }
