@@ -19,13 +19,13 @@ public class LCFS implements scheduling{
         int endwork=counter+working.bursTime;
         ArrayList<Integer> TAT=new ArrayList<Integer>();
         int prosTAT=0;
-        while (counter<runtime)
+        while (counter<runtime+1)
         {
-            if (counter==stack.peek().ArrivalTime && (!stack.isEmpty())){
+            if ((!stack.isEmpty())&&counter==stack.peek().ArrivalTime){
                 stack2.push(stack.pop());
             }
             if (endwork==counter)   {
-                prosTAT=working.bursTime+(counter-working.ArrivalTime);//bursttime+waitingtime
+                prosTAT=working.bursTime+(counter-working.ArrivalTime+1);//bursttime+waitingtime
                 TAT.add(prosTAT);
                 working.clone(stack2.pop());
                 endwork=counter+working.bursTime;
@@ -36,7 +36,7 @@ public class LCFS implements scheduling{
         for (Integer ta:TAT){
             avgTAT+=(float)ta;
         }
-        avgTAT=avgTAT/(float)TAT.size();
+        avgTAT=avgTAT/(float)pro.length;
         return avgTAT;
     }
 }
