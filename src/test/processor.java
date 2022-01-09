@@ -19,8 +19,6 @@ public class processor {
             pro[i]=new Process(Integer.parseInt(times[0]),Integer.parseInt(times[1]));
         }
         new RR(pro);
-        FCFS fcfs =  new FCFS(pro);
-        System.out.println("FCFS: mean turnaround = " + ((float)fcfs.sumTurnaround/(float)numOfProcess)  + "\n");
 
 
     }

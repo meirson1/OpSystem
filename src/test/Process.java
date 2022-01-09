@@ -3,8 +3,6 @@ package test;
 public class Process {
         int arriValTime;
         int bursTime;
-        int finishTime;
-        int waitingTime;
 
         public Process(int arriValTime, int bursTime) {
                 this.arriValTime = arriValTime;
