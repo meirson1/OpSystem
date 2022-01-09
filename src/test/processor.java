@@ -5,7 +5,7 @@ public class processor {
 
     public static void main(String[] args) throws Exception
     {
-        File file = new File("C:\\Users\\pankaj\\Desktop\\test.txt");
+        File file = new File("input1.txt");
         BufferedReader br = new BufferedReader(new FileReader(file));
 
         String st;
@@ -16,9 +16,7 @@ public class processor {
             String line= br.readLine();
             String[] times=line.split(",");
             pro[i]=new Process(Integer.parseInt(times[0]),Integer.parseInt(times[1]));
-
-
-
         }
+        System.out.println("Average of Round Robin with quantum of 2 is: "+new RR(pro).output);
     }
 }

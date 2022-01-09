@@ -1,27 +1,28 @@
 package test;
 
 public class Process {
-        int arriValTime;
+        int ArrivalTime;
         int bursTime;
 
-
-        public Process(int arriValTime, int bursTime) {
-                this.arriValTime = arriValTime;
+        public Process(int ArrivalTime, int bursTime) {
+                this.ArrivalTime = ArrivalTime;
                 this.bursTime = bursTime;
         }
 
-        public int getArriValTime(){
-                return arriValTime;
-        }
-        public int getBursTime(){
-                return bursTime;
+        public int getArrivalTime() {
+                return this.ArrivalTime;
         }
 
-        public void setArriValTime(int arriValTime1){
-                this.arriValTime=arriValTime1;
+        public int getBursTime() {
+                return this.bursTime;
         }
-        public void setBursTime(int bursTime1){
-                this.bursTime=bursTime1;
+
+        public void setArrivalTime(int ArrivalTime1) {
+                this.ArrivalTime = ArrivalTime1;
+        }
+
+        public void setBursTime(int bursTime1) {
+                this.bursTime = bursTime1;
         }
            public void clone(Process p){
                 this.arriValTime=p.arriValTime;

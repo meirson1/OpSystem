@@ -1,8 +1,7 @@
 package test;
 
 public interface scheduling {
-    float avg_TAT = 0;
+    float avg_TAT = 0.0F;
 
-    public float calculate(Process[] pro);
-
+    float calculate(Process[] var1);
 }
